@@ -19,7 +19,6 @@
       line-height: 1.6;
     }
 
-    /* 내비게이션 바 */
     header {
       display: flex;
       justify-content: space-between;
@@ -46,7 +45,6 @@
       font-weight: 500;
     }
 
-    /* 공통 섹션 스타일 */
     section {
       padding: 80px 8%;
     }
@@ -59,7 +57,6 @@
       letter-spacing: -0.5px;
     }
 
-    /* 히어로 섹션 */
     .hero {
       background-color: #f8f9fa;
       text-align: center;
@@ -88,9 +85,13 @@
       font-weight: 600;
       border-radius: 4px;
       border: 1px solid #000000;
+      transition: transform 0.2s ease;
     }
 
-    /* 프로젝트 섹션 */
+    .btn:hover {
+      transform: scale(1.05);
+    }
+
     .projects-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -102,6 +103,24 @@
       border-radius: 8px;
       padding: 24px;
       background-color: #ffffff;
+      transition: all 0.3s ease;
+      cursor: pointer;
+    }
+
+    .project-card:hover {
+      background-color: #000000;
+      color: #ffffff;
+      transform: scale(1.05);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+    }
+
+    .project-card:hover p {
+      color: #cccccc;
+    }
+
+    .project-card:hover .tag {
+      background-color: #333333;
+      color: #ffffff;
     }
 
     .project-img {
@@ -125,6 +144,7 @@
       color: #666666;
       font-size: 0.95rem;
       margin-bottom: 16px;
+      transition: color 0.3s ease;
     }
 
     .tags {
@@ -138,9 +158,9 @@
       padding: 4px 10px;
       font-size: 0.8rem;
       border-radius: 4px;
+      transition: all 0.3s ease;
     }
 
-    /* 스킬 섹션 */
     .skills {
       background-color: #f8f9fa;
     }
@@ -158,9 +178,16 @@
       padding: 10px 20px;
       font-weight: 600;
       border-radius: 4px;
+      transition: all 0.3s ease;
+      cursor: pointer;
     }
 
-    /* 자기소개 섹션 */
+    .skill-badge:hover {
+      background-color: #000000;
+      color: #ffffff;
+      transform: scale(1.1);
+    }
+
     .about-content {
       max-width: 600px;
       margin: 0 auto;
@@ -172,7 +199,6 @@
       font-size: 1.05rem;
     }
 
-    /* 푸터 */
     footer {
       background-color: #000000;
       color: #888888;
