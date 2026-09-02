@@ -59,13 +59,18 @@
     .hero {
       background-color: #f8f9fa;
       text-align: center;
-      padding: 80px 8%;
+      padding: 100px 8%;
     }
 
     .hero h1 {
-      font-size: 2.2rem;
+      font-size: 2.5rem;
       font-weight: 800;
       margin-bottom: 16px;
+    }
+
+    .hero p {
+      color: #666666;
+      font-size: 1.1rem;
     }
 
     .btn {
@@ -77,25 +82,148 @@
       font-weight: 600;
       border-radius: 4px;
       border: 1px solid #000000;
+      transition: transform 0.2s ease;
     }
 
-    .content-box {
-      max-width: 700px;
+    .btn:hover {
+      transform: scale(1.05);
+    }
+
+    .timeline {
+      max-width: 800px;
       margin: 0 auto;
-      background: #f8f9fa;
-      padding: 30px;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .timeline-item {
+      border: 1px solid #e5e5e5;
+      border-left: 4px solid #000000;
+      padding: 20px;
+      border-radius: 4px;
+      background-color: #ffffff;
+      transition: all 0.3s ease;
+      cursor: pointer;
+    }
+
+    .timeline-item:hover {
+      background-color: #000000;
+      color: #ffffff;
+      transform: scale(1.03);
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+    }
+
+    .timeline-item:hover .timeline-desc {
+      color: #cccccc;
+    }
+
+    .timeline-item:hover .timeline-date {
+      color: #aaaaaa;
+    }
+
+    .timeline-date {
+      font-size: 0.85rem;
+      color: #888888;
+      font-weight: 600;
+      margin-bottom: 6px;
+      transition: color 0.3s ease;
+    }
+
+    .timeline-title {
+      font-size: 1.2rem;
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+
+    .timeline-desc {
+      color: #555555;
+      font-size: 0.95rem;
+      transition: color 0.3s ease;
+    }
+
+    .qa-container {
+      max-width: 800px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+    }
+
+    .qa-card {
+      background-color: #f8f9fa;
+      padding: 24px;
       border-radius: 8px;
       border: 1px solid #e5e5e5;
+      transition: all 0.3s ease;
+      cursor: pointer;
     }
 
-    .content-box h3 {
-      font-size: 1.3rem;
+    .qa-card:hover {
+      background-color: #000000;
+      color: #ffffff;
+      transform: scale(1.03);
+    }
+
+    .qa-card:hover .qa-question {
+      color: #ffffff;
+    }
+
+    .qa-card:hover .qa-answer {
+      color: #cccccc;
+    }
+
+    .qa-question {
+      font-size: 1.1rem;
+      font-weight: 700;
+      margin-bottom: 10px;
+      color: #000000;
+      transition: color 0.3s ease;
+    }
+
+    .qa-answer {
+      color: #555555;
+      font-size: 0.95rem;
+      transition: color 0.3s ease;
+    }
+
+    .grid-3 {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 20px;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    .goal-card {
+      border: 1px solid #e5e5e5;
+      padding: 24px;
+      border-radius: 8px;
+      text-align: center;
+      transition: all 0.3s ease;
+      cursor: pointer;
+    }
+
+    .goal-card:hover {
+      background-color: #000000;
+      color: #ffffff;
+      transform: scale(1.05);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+    }
+
+    .goal-card:hover p {
+      color: #cccccc;
+    }
+
+    .goal-card h3 {
+      font-size: 1.2rem;
       margin-bottom: 12px;
     }
 
-    .content-box p {
-      color: #555555;
-      margin-bottom: 20px;
+    .goal-card p {
+      color: #666666;
+      font-size: 0.9rem;
+      transition: color 0.3s ease;
     }
 
     footer {
@@ -120,21 +248,65 @@
   </header>
 
   <section class="hero">
-    <h1>PAGE 2 : 추가 이야기</h1>
-    <p>포트폴리오 두 번째 페이지입니다.</p>
+    <h1>PAGE 2 : 더 많은 이야기</h1>
+    <p>포트폴리오 수업 동안 배운 내용과 솔직한 후기, 그리고 앞으로의 목표입니다.</p>
   </section>
 
   <section>
-    <h2 class="section-title">FUTURE GOALS</h2>
-    <div class="content-box">
-      <h3>앞으로 해보고 싶은 것</h3>
-      <p>HTML/CSS 공부 더 해서 더 멋진 사이트 만들어보기!</p>
-      <p>영어도 열심히 공부하기...</p>
+    <h2 class="section-title">수업 진행 과정</h2>
+    <div class="timeline">
+      <div class="timeline-item">
+        <div class="timeline-date">STEP 1</div>
+        <div class="timeline-title">HTML 기초 태그 시작</div>
+        <div class="timeline-desc">웹페이지의 전체적인 뼈대와 틀을 잡는 방법을 배웠습니다. 태그 닫는 걸 자꾸 깜빡해서 오류가 나기도 했습니다.</div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-date">STEP 2</div>
+        <div class="timeline-title">CSS로 디자인 입히기</div>
+        <div class="timeline-desc">검정, 흰색, 회색만을 활용해 심플하고 보기 좋은 모노톤 디자인 스타일을 적용해 보았습니다.</div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-date">STEP 3</div>
+        <div class="timeline-title">GitHub 배포 & QR코드 연결</div>
+        <div class="timeline-desc">내가 직접 만든 파일이 인터넷 주소로 열리고, QR코드로 다른 사람 컴퓨터나 스마트폰에서 실행되는 걸 보며 신기했습니다.</div>
+      </div>
     </div>
   </section>
 
-  <div style="text-align: center; margin-bottom: 60px;">
-    <a href="index.html" class="btn">⬅️ 이전 페이지로 돌아가기</a>
+  <section style="background-color: #f8f9fa;">
+    <h2 class="section-title">솔직한 Q&A</h2>
+    <div class="qa-container">
+      <div class="qa-card">
+        <div class="qa-question">Q. 홈페이지 만들면서 가장 재미있었던 순간은?</div>
+        <div class="qa-answer">코드 수정하고 저장한 뒤 웹 브라우저에서 바로 반응하고 모바일 화면이나 QR코드로 떴을 때가 제일 신기하고 재미있었습니다.</div>
+      </div>
+      <div class="qa-card">
+        <div class="qa-question">Q. 가장 어려웠던 점이나 힘들었던 점은?</div>
+        <div class="qa-answer">영어로 된 전문 용어나 태그명이 많아서 익숙해지기 전까진 햇갈렸고, 파일 경로가 조금만 틀려도 이미지가 안 나오는 점이 까다로웠습니다.</div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2 class="section-title">앞으로의 목표</h2>
+    <div class="grid-3">
+      <div class="goal-card">
+        <h3>🎨 웹 디자인 능력 업</h3>
+        <p>더 다양하고 세련된 색상 조합과 레이아웃을 다룰 수 있도록 연습하기</p>
+      </div>
+      <div class="goal-card">
+        <h3>💻 자바스크립트 도전</h3>
+        <p>단순 화면 띄우기를 넘어 클릭 이벤트나 동적인 기능을 만들어보기</p>
+      </div>
+      <div class="goal-card">
+        <h3>🔤 영어 단어 공부</h3>
+        <p>개발 용어와 설명 코드를 쉽게 이해할 수 있도록 기본 영어 실력 키우기</p>
+      </div>
+    </div>
+  </section>
+
+  <div style="text-align: center; margin: 20px 0 60px 0;">
+    <a href="index.html" class="btn">⬅️ 첫 번째 페이지로 돌아가기</a>
   </div>
 
   <footer>
